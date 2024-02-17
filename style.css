@@ -1,0 +1,97 @@
+:root {
+  --primary-bg-color: rgb(9, 7, 15);
+  --text-color: white;
+  --link-color: rgb(218, 148, 198);
+  --shadow-color: rgb(255, 215, 246);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.background {
+  background-image: url("img/japanese-night-3840x2160.jpg");
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.logo {
+  flex-grow: 1;
+}
+
+.logo img {
+  height: 60px;
+  width: 100px;
+  margin-left: 20px;
+  padding: 10px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  color: var(--text-color);
+  height: 70px;
+  background-color: var(--primary-bg-color);
+  position: relative;
+}
+
+nav {
+  position: absolute;
+  top: 70px;
+  width: 100%;
+  background-color: var(--primary-bg-color);
+}
+
+@media (min-width: 600px) {
+  nav {
+    top: 0;
+    right: 30px;
+    width: auto;
+  }
+  nav li {
+    display: inline-block !important;
+    margin: 10px;
+    list-style-type: none;
+  }
+}
+
+nav li {
+  padding: 15px 0;
+  text-align: center;
+  display: none;
+}
+
+nav li:hover {
+  text-shadow: 0 0 20px var(--shadow-color);
+}
+
+header nav li a {
+  text-decoration: none;
+  color: var(--link-color);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+}
+
+@media (min-width: 600px) {
+  .menu-icon {
+    display: none !important;
+  }
+
+  .menu-list.active {
+    display: flex;
+  }
+}
+
+.menu-icon:hover {
+  text-shadow: 0 0 20px var(--shadow-color);
+}
+
+.menu-icon {
+  display: block;
+  margin-right: 30px;
+  font-size: 1.5rem;
+  color: var(--link-color);
+}
